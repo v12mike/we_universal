@@ -294,7 +294,7 @@ input.tiny {
 
 @media only screen and (max-width: 550px) {
 	.inventea-wrapper {
-	    padding: 5px 5px;
+	    padding: 14px 5px 5px 5px;
     	}
 
 	ul.topiclist.forums dd.lastpost {
