@@ -4,11 +4,11 @@
 	Based on style:		prosilver (the default phpBB 3.1.x style)
 	Original author:	Tom Beddard ( http://www.subblue.com/ )
 	Modified by:		nextgen ( http://xeronix.org/ )
+	Modified by:		v12mike ( v12mike@ingenious.co.nz )
     --------------------------------------------------------------
 */
 
-@import url("common.css");
-@import url("content.css");
-@import url("cp.css");
-@import url("forms.css");
-@import url("responsive.css");
+@import url("common.css?v=2.5.5-b");
+@import url("content.css?v=2.5.5-b");
+@import url("cp.css?v=2.5.5-b");
+@import url("forms.css?v=2.5.5-b");

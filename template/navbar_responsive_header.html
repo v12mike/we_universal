@@ -20,7 +20,7 @@
 							<!-- EVENT overall_header_navigation_prepend -->
 
 							<li <!-- IF not S_USER_LOGGED_IN -->data-skip-responsive="true"<!-- ELSE -->data-last-responsive="true"<!-- ENDIF -->>
-								<a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
+								<a id="menu_faq" href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
 									<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>{L_FAQ}</span>
 								</a>
 							</li>
@@ -75,14 +75,14 @@
 
             <!-- IF not S_IS_BOT -->
 						<!-- IF S_DISPLAY_MEMBERLIST -->
-							<li>
+							<li id="menu_memberlist">
 								<a href="{U_MEMBERLIST}" role="menuitem">
 									<i class="icon fa-group fa-fw" aria-hidden="true"></i><span>{L_MEMBERLIST}</span>
 								</a>
 							</li>
 						<!-- ENDIF -->
 						<!-- IF U_TEAM -->
-							<li>
+							<li id="menu_team">
 								<a href="{U_TEAM}" role="menuitem">
 									<i class="icon fa-shield fa-fw" aria-hidden="true"></i><span>{L_THE_TEAM}</span>
 								</a>

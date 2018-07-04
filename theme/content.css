@@ -71,10 +71,6 @@ ul.topiclist li.row dl {
 	padding: 0;
 }
 
-ul.topiclist li.row dd {
-	padding: 4px;
-}
-
 /* Cell  */
 ul.topiclist dt,
 ul.topiclist dd,
@@ -90,6 +86,11 @@ ul.topiclist dt,
 ul.topiclist dd {
 	display: table-cell;
 	float: none;
+}
+
+ul.topiclist li.row dd {
+/*	margin-bottom: 4px;*/
+	padding: 4px;
 }
 
 /* Different background in odd columns */

@@ -27,6 +27,7 @@
 	Based on style:   prosilver (this is the default phpBB3 style)
 	Original author:  Tom Beddard ( http://www.subBlue.com/ )
 	Modified by:      nextgen ( http://xeronix.org/ )
+	Modified by:      v12mike ( v12mike@ingenious.co.nz )
 -->
 
 <!-- IF S_ALLOW_CDN -->
@@ -51,6 +52,7 @@
 <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
 <link href="{ROOT_PATH}styles/prosilver/theme/responsive.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
 <link href="{T_THEME_PATH}/responsive.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+<link href="{T_THEME_PATH}/custom.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
 
 <!-- IF S_CONTENT_DIRECTION eq 'rtl' -->
 	<link href="{ROOT_PATH}styles/prosilver/theme/bidi.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
@@ -75,7 +77,7 @@
 <!-- EVENT overall_header_stylesheets_after -->
 
 <!--[if lt IE 9]>
-	<script type="text/javascript" src="{T_TEMPLATE_PATH}/html5shiv.min.js"></script>
+	<script src="{T_TEMPLATE_PATH}/html5shiv.min.js"></script>
 <![endif]-->
 
 </head>
@@ -91,6 +93,7 @@
 			<!-- INCLUDE navbar_responsive_header.html -->
 
 			<!-- EVENT overall_header_searchbox_before -->
+			<!-- EVENT overall_header_searchbox_after -->
 
 			<ul class="linklist bulletin inventea-user-menu" role="menubar">
 				<!-- IF S_REGISTERED_USER -->
@@ -171,19 +174,85 @@
 		</nav>
 	</div>
 
-	<header class="inventea-header">
+		<div class="inventea-header">
+			<header >
 		<!-- EVENT overall_header_headerbar_before -->	
-		<div class="inventea-dashboard" role="banner">
 			<!-- EVENT overall_header_navbar_before -->
-			<!-- INCLUDE navbar_header.html -->
-
-			<div class="inventea-sitename">
-				<h1><a href="<!-- IF U_SITE_HOME -->{U_SITE_HOME}<!-- ELSE -->{U_INDEX}<!-- ENDIF -->" title="<!-- IF U_SITE_HOME -->{L_SITE_HOME}<!-- ELSE -->{L_INDEX}<!-- ENDIF -->">{SITENAME}</a></h1>
-				<span>{SITE_DESCRIPTION}</span>
+			<nav>
+			<div class="inventea-posts-menu">
+				<ul class="inventea-menu" role="menubar">
+					<!-- EVENT navbar_header_quick_links_before -->
+					<!-- IF S_DISPLAY_SEARCH -->
+					<!-- IF S_REGISTERED_USER -->
+					<li>
+						<a href="{U_SEARCH_SELF}" role="menuitem">{L_SEARCH_SELF}</a>
+					</li><!-- ENDIF -->
+					<!-- IF S_USER_LOGGED_IN -->
+					<li>
+						<a href="{U_SEARCH_NEW}" role="menuitem">{L_SEARCH_NEW}</a>
+					</li><!-- ENDIF -->
+					<!-- IF S_LOAD_UNREADS -->
+					<li>
+						<a href="{U_SEARCH_UNREAD}" role="menuitem">{L_SEARCH_UNREAD}</a>
+					</li><!-- ENDIF -->
+					<li>
+						<a href="{U_SEARCH_UNANSWERED}" role="menuitem">{L_SEARCH_UNANSWERED}</a>
+					</li>
+					<li>
+						<a href="{U_SEARCH_ACTIVE_TOPICS}" role="menuitem">{L_SEARCH_ACTIVE_TOPICS}</a>
+					</li>
+					<!-- ENDIF -->
+					<!-- EVENT navbar_header_quick_links_after -->
+				</ul>
 			</div>
-		</div>
+			</nav>
+			<div class="inventea-dashboard" role="banner">
+				<a href="<!-- IF U_SITE_HOME -->{U_SITE_HOME}<!-- ELSE -->{U_INDEX}<!-- ENDIF -->" title="<!-- IF U_SITE_HOME -->{L_SITE_HOME}<!-- ELSE -->{L_INDEX}<!-- ENDIF -->">
+					<div class="inventea-sitename">
+						<h1>{SITENAME}</h1>
+						<span>{SITE_DESCRIPTION}</span>
+					</div>
+					<img 
+					src="{ROOT_PATH}styles/we_universal/theme/images/dashboard.jpg" alt="forum header image">
+				</a>
+			</div>
+
+			<nav>
+				<div class="inventea-forum-menu">
+					<ul class="inventea-menu" role="menubar">
+						<!-- EVENT overall_header_navigation_prepend -->
+						<li id="button_faq">
+							<a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">{L_FAQ}</a>
+						</li>
+						<!-- IF S_DISPLAY_SEARCH -->
+						<li>
+							<a href="{U_SEARCH}" role="menuitem">{L_SEARCH}</a>
+						</li><!-- ENDIF -->
+						<!-- IF not S_IS_BOT -->
+						<!-- IF S_DISPLAY_MEMBERLIST -->
+						<li id="button_memberlist">
+							<a href="{U_MEMBERLIST}" role="menuitem">{L_MEMBERLIST}</a>
+						</li><!-- ENDIF -->
+						<!-- IF U_TEAM -->
+						<li id="button_team">
+							<a href="{U_TEAM}" role="menuitem">{L_THE_TEAM}</a>
+						</li><!-- ENDIF -->
+						<!-- ENDIF -->
+						<!-- IF U_MCP -->
+						<li>
+							<a href="{U_MCP}" title="{L_MCP_SHORT}" role="menuitem">{L_MCP_SHORT}</a>
+						</li><!-- ENDIF -->
+						<!-- IF U_ACP -->
+						<li>
+							<a href="{U_ACP}" title="{L_ACP_SHORT}" role="menuitem">{L_ACP_SHORT}</a>
+						</li><!-- ENDIF -->
+						<!-- EVENT overall_header_navigation_append -->
+					</ul>
+				</div>
+			</nav>
 		<!-- EVENT overall_header_headerbar_after -->
-	</header>
+		</header>
+	</div>
 
 	<div class="inventea-wrapper inventea-content" role="main">
 		<!-- EVENT overall_header_page_body_before -->

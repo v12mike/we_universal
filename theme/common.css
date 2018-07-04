@@ -91,15 +91,20 @@ a:hover, a:focus {	color: #bc2a4d;	}
 }
 
 .inventea-header {
+    position: relative;
+    margin: auto;
 	width: 100%;
-	background: #292c2f;
+	background: #b4b4b4;
+    overflow: hidden;
 }
 
-.inventea-dashboard {
-	position: relative;
-	min-height: 240px;
-	background: url("./images/dashboard.jpg") center center no-repeat;
-	background-size: cover;
+.inventea-dashboard img {
+    width: 100%;
+    height: auto;
+}
+
+.inventea-dashboard a {
+	display: block;
 }
 
 .inventea-content {
@@ -133,7 +138,9 @@ a:hover, a:focus {	color: #bc2a4d;	}
  * Forum name and description
  */
 .inventea-sitename {
-	padding: 76px 50px 98px;
+    position: absolute;
+    left: 5%; 
+    top: 40%;
 	color: #fff;
 	font-size: 14px;
 }
@@ -196,6 +203,11 @@ a.header-avatar span:after {
     padding-top: 0;
 }
 
+/* pm and notification icons/labels */
+.linklist.compact .rightside > a > span {
+	display: inline;
+}
+
 /**
  * Forum navigation
  *
@@ -208,15 +220,17 @@ a.header-avatar span:after {
  */
 .inventea-posts-menu,
 .inventea-forum-menu {
-	position: absolute;
+	display: block;
 }
 
 .inventea-posts-menu {
-	right: 0;
+    float: right;
+    margin-right: 2.5%;
 }
 
 .inventea-forum-menu {
-	bottom: 0;
+    float: left;
+    margin-left: 2.5%;
 }
 
 .inventea-menu {
@@ -236,9 +250,9 @@ a.header-avatar span:after {
 
 .inventea-menu li > a {
 	display: block;
-	padding: 8px 10px;
+	padding: .7vw 10px;
 	background: #333;
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.7);
 	color: #eee;
 }
 
