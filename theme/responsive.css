@@ -1,3 +1,10 @@
+/* over-ride some odd formatting inherited from prosilver */
+@media only screen and (max-width: 950px) {
+ul.topiclist dt .list-inner {
+    margin: 0;
+}
+}
+
 /**
  * Common tags
  */
