@@ -75,7 +75,7 @@ a:hover, a:active {
  * set this value higher if the screen buttons start to wrap, or the text becomes ugly in your language.
  * The valid range of this value is 319px to 699px
  */
-@media only screen and (max-width: 359px) {
+@media only screen and (max-width: 549px) {
     .inventea-menu li > a {
            display: none; 
     }
