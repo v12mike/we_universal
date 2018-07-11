@@ -25,6 +25,11 @@ Next go to *Administration Control Panel*, open *CUSTOMISE* tab, navigate to
 To activate the style go to *Board settings* from *GENERAL* tab where you can
 select new default and guest style.
 
+Customisation
+-------------
+
+There are several easy customisations for the theme which may be activated and adjusted in 
+the file theme/customise.css
 
 Assets
 ------
