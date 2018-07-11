@@ -18,7 +18,7 @@
  * Uncomment the following lines to have all links underlined 
  * and visited links re-coloured
  */
-
+/*
 a:link,a:visited {
     text-decoration: underline;
     color: #3f3f3f; }
@@ -26,6 +26,7 @@ a:link,a:visited {
 a:focus,
 a:hover, a:active {
     text-decoration: underline; }
+*/
 
 /*
  * set header background colour (appears as a border around the image)
@@ -36,23 +37,6 @@ a:hover, a:active {
 }
 */
 
-/*
- * Button hide threshold
- * The max-width here adjusts the screen widths for which the header buttons are replaced by a dropdown menu
- * set this value higher if the screen buttons start to wrap, or the text becomes ugly in your language.
- * The valid range of this value is 319px to 699px
- */
-/*
-@media only screen and (max-width: 600px){
-.inventea-mobile-dropdown-menu {
-	display: block;
-    }
-
- .inventea-menu li > a {
-        display: none; 
-    }
-}
-*/
 /* Set the maximum forum width on wide screens
  * To set a maximum width that the forum will not grow beyond, uncomment the following lines
  * and set a value (1200px is a typical value)
@@ -73,9 +57,11 @@ a:hover, a:active {
 }
 */
 
+/*
 #menu_team, #button_team{
     display: none;
 }
+*/
 
 /*
 #menu_memberlist, #button_memberlist{
@@ -83,14 +69,18 @@ a:hover, a:active {
 }*/
 
 
-@media only screen and (max-width: 319px) {
+/*
+ * Button hide threshold
+ * The max-width here adjusts the screen widths for which the header buttons are replaced by a dropdown menu
+ * set this value higher if the screen buttons start to wrap, or the text becomes ugly in your language.
+ * The valid range of this value is 319px to 699px
+ */
+@media only screen and (max-width: 359px) {
     .inventea-menu li > a {
-        /* the following attribute should be 'block' to display the header buttons in responsive mode or 'none' to hide them */
            display: none; 
     }
 
     .inventea-mobile-dropdown-menu {
-        /* the following attribute should be 'block' to display the dropdown menu in responsive mode or 'none' to hide it */
 	    display: block;
     }
     .inventea-dashboard img {
