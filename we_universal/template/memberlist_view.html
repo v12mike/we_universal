@@ -39,7 +39,10 @@
 		<!-- ENDIF -->
 		<!-- IF S_USER_INACTIVE --><dt>{L_USER_IS_INACTIVE}{L_COLON}</dt> <dd>{USER_INACTIVE_REASON}</dd><!-- ENDIF -->
 		<!-- IF AGE !== '' --><dt>{L_AGE}{L_COLON}</dt> <dd>{AGE}</dd><!-- ENDIF -->
-		<!-- IF S_GROUP_OPTIONS --><dt>{L_USERGROUPS}{L_COLON}</dt> <dd><select name="g">{S_GROUP_OPTIONS}</select> <input type="submit" name="submit" value="{L_GO}" class="button2" /></dd><!-- ENDIF -->
+		<!-- IF S_GROUP_OPTIONS -->
+			<dt>{L_USERGROUPS}{L_COLON}</dt> 
+			<dd><select name="g">{S_GROUP_OPTIONS}</select> <input type="submit" name="submit" value="{L_GO}" class="button2" /></dd>
+		<!-- ENDIF -->
 		<!-- EVENT memberlist_view_non_contact_custom_fields_before -->
 		<!-- BEGIN custom_fields -->
 			<!-- IF not custom_fields.S_PROFILE_CONTACT -->
@@ -78,7 +81,12 @@
 		<dl class="details">
 		<!-- IF U_EMAIL --><dt>{L_EMAIL_ADDRESS}{L_COLON}</dt> <dd><a href="{U_EMAIL}">{L_SEND_EMAIL_USER}</a></dd><!-- ENDIF -->
 		<!-- IF U_PM --><dt>{L_PM}{L_COLON}</dt> <dd><a href="{U_PM}">{L_SEND_PRIVATE_MESSAGE}</a></dd><!-- ENDIF -->
-		<!-- IF U_JABBER and S_JABBER_ENABLED --><dt>{L_JABBER}{L_COLON}</dt> <dd><a href="{U_JABBER}" onclick="popup(this.href, 750, 320); return false;">{L_SEND_JABBER_MESSAGE}</a></dd><!-- ELSEIF USER_JABBER --><dt>{L_JABBER}{L_COLON}</dt> <dd>{USER_JABBER}</dd><!-- ENDIF -->
+		<!-- IF U_JABBER and S_JABBER_ENABLED -->
+			<dt>{L_JABBER}{L_COLON}</dt> 
+			<dd><a href="{U_JABBER}" onclick="popup(this.href, 750, 320); return false;">{L_SEND_JABBER_MESSAGE}</a></dd>
+		<!-- ELSEIF USER_JABBER -->
+				<dt>{L_JABBER}{L_COLON}</dt> <dd>{USER_JABBER}</dd>
+		<!-- ENDIF -->
 		<!-- EVENT memberlist_view_contact_custom_fields_before -->
 		<!-- BEGIN custom_fields -->
 			<!-- IF custom_fields.S_PROFILE_CONTACT -->
