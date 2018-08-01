@@ -1,0 +1,64 @@
+<!-- IF not S_IS_BOT -->
+	<!-- EVENT viewtopic_topic_tools_before -->
+	<!-- IF U_WATCH_TOPIC -->
+		<a href="{U_WATCH_TOPIC}" class="button" title="S_WATCH_TOPIC_TITLE">
+				<span>{S_WATCH_TOPIC_TITLE}</span> <i class="icon fa-<!-- IF S_WATCHING_TOPIC -->check-<!-- ENDIF -->square-o fa-fw" aria-hidden="true"></i>
+		</a>
+	<!-- ENDIF -->
+	<span class="responsive-hide">
+		<!-- IF U_BOOKMARK_TOPIC -->
+			<a href="{U_BOOKMARK_TOPIC}" class="button" title="L_BOOKMARK_TOPIC">
+					<span>{S_BOOKMARK_TOPIC}</span> <i class="icon fa-bookmark-o fa-fw" aria-hidden="true"></i>
+			</a>
+		<!-- ENDIF -->
+		<!-- IF U_BUMP_TOPIC -->
+			<a href="{U_BUMP_TOPIC}" class="button" title="L_BUMP_TOPIC">
+					<span>{L_BUMP_TOPIC}</span> <i class="icon fa-level-up fa-fw" aria-hidden="true"></i>
+			</a>
+		<!-- ENDIF -->
+	</span>
+	<!-- IF(U_BOOKMARK_TOPIC or U_BUMP_TOPIC or U_EMAIL_TOPIC or U_PRINT_TOPIC or S_DISPLAY_TOPIC_TOOLS) -->
+		<div class="dropdown-container dropdown-button-control topic-tools responsive-show"<!-- IF!(U_BUMP_TOPIC or U_EMAIL_TOPIC or U_PRINT_TOPIC or S_DISPLAY_TOPIC_TOOLS) --> style="display: none;"<!-- ENDIF -->>
+			<span title="{L_TOPIC_TOOLS}" class="button button-secondary dropdown-trigger dropdown-select">
+				<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
+				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
+			</span>
+			<div class="dropdown">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents">
+					<!-- EVENT viewtopic_topic_tools_before -->
+					<!-- IF U_BOOKMARK_TOPIC -->
+						<li>
+							<a href="{U_BOOKMARK_TOPIC}" class="bookmark-link" title="{L_BOOKMARK_TOPIC}" data-ajax="alt_text" data-alt-text="{S_BOOKMARK_TOGGLE}" data-update-all=".bookmark-link">
+								<i class="icon fa-bookmark-o fa-fw" aria-hidden="true"></i><span>{S_BOOKMARK_TOPIC}</span>
+							</a>
+						</li>
+					<!-- ENDIF -->
+					<!-- IF U_BUMP_TOPIC -->
+					<li>
+						<a href="{U_BUMP_TOPIC}" title="{L_BUMP_TOPIC}" data-ajax="true">
+							<i class="icon fa-level-up fa-fw" aria-hidden="true"></i><span>{L_BUMP_TOPIC}</span>
+						</a>
+					</li>
+					<!-- ENDIF -->
+					<!-- IF U_EMAIL_TOPIC -->
+					<li>
+						<a href="{U_EMAIL_TOPIC}" title="{L_EMAIL_TOPIC}">
+							<i class="icon fa-envelope-o fa-fw" aria-hidden="true"></i><span>{L_EMAIL_TOPIC}</span>
+						</a>
+					</li>
+					<!-- ENDIF -->
+					<!-- IF U_PRINT_TOPIC -->
+					<li>
+						<a href="{U_PRINT_TOPIC}" title="{L_PRINT_TOPIC}" accesskey="p">
+							<i class="icon fa-print fa-fw" aria-hidden="true"></i><span>{L_PRINT_TOPIC}</span>
+						</a>
+					</li>
+					<!-- ENDIF -->
+					<!-- EVENT viewtopic_topic_tools_after -->
+				</ul>
+			</div>
+		</div>
+	<!-- ENDIF -->
+	<!-- EVENT viewtopic_topic_tools_after -->
+<!-- ENDIF -->

@@ -206,6 +206,7 @@ ul.topiclist.topics li.row dt {
 
 a.lastsubject {
 	font-weight: normal;
+	border-bottom: 1px dotted;
 }
 
 dd.topics,
