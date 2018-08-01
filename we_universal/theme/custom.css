@@ -44,7 +44,7 @@ a:hover, a:active {
 .inventea-wrapper,
 .inventea-header,
 .inventea-footer {
-	max-width: 800px;
+	max-width: 1200px;
 }*/
 
 
@@ -73,7 +73,9 @@ a:hover, a:active {
  * Button hide threshold
  * The max-width here adjusts the screen widths for which the header buttons are replaced by a dropdown menu
  * set this value higher if the screen buttons start to wrap, or the text becomes ugly in your language.
- * The valid range of this value is 319px to 699px
+ * The valid range of this value is 319px to 699px.
+ * a value of 319px works for me, but if you have added buttons, or a language with long button labels, a higher
+ * value ma be better.
  */
 @media only screen and (max-width: 549px) {
     .inventea-menu li > a {
