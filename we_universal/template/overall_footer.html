@@ -9,11 +9,29 @@
 
 			<footer class="inventea-credits">
 				<!-- EVENT overall_footer_copyright_prepend -->
-				{CREDIT_LINE}<br />
-				<!-- IF TRANSLATION_INFO -->{TRANSLATION_INFO}<br /><!-- ENDIF -->
-				Style we_universal created by <a href="https://inventea.com/" title="phpBB styles, HTML5 &amp; CSS3 templates">INVENTEA</a> & v12mike
+				<p class="footer-row">
+					<span class="footer-copyright">{{ CREDIT_LINE }}</span>
+				</p>
+				<!-- IF TRANSLATION_INFO -->
+				<p class="footer-row">
+					<span class="footer-copyright">{{ TRANSLATION_INFO }}</span>
+				</p>
+				<!-- ENDIF -->				Style we_universal created by <a href="https://inventea.com/" title="phpBB styles, HTML5 &amp; CSS3 templates">INVENTEA</a> & v12mike
 				<!-- EVENT overall_footer_copyright_append -->
-				<!-- IF DEBUG_OUTPUT --><br />{DEBUG_OUTPUT}<!-- ENDIF -->
+				<p class="footer-row">
+					<a class="footer-link" href="{{ U_PRIVACY }}" title="{{ lang('PRIVACY_LINK') }}" role="menuitem">
+						<span class="footer-link-text">{{ lang('PRIVACY_LINK') }}</span>
+					</a>
+
+					<a class="footer-link" href="{{ U_TERMS_USE }}" title="{{ lang('TERMS_LINK') }}" role="menuitem">
+						<span class="footer-link-text">{{ lang('TERMS_LINK') }}</span>
+					</a>
+				</p>
+				<!-- IF DEBUG_OUTPUT -->
+				<p class="footer-row">
+					<span class="footer-info">{{ DEBUG_OUTPUT }}</span>
+				</p>
+				<!-- ENDIF -->
 			</footer>
 		</div>
 	</div>
