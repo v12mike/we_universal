@@ -247,6 +247,7 @@ dd.redirect {
 	margin-bottom: 9px;
 	line-height: 19px;
 	font-size: 13px;
+	text-transform: capitalize;
 }
 
 /**
