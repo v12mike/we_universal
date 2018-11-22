@@ -1,32 +1,41 @@
 <!-- IF not S_IS_BOT -->
 	<!-- EVENT viewtopic_topic_tools_before -->
 	<!-- IF U_WATCH_TOPIC -->
-		<a href="{U_WATCH_TOPIC}" class="button" title="S_WATCH_TOPIC_TITLE">
-				<span>{S_WATCH_TOPIC_TITLE}</span> <i class="icon fa-<!-- IF S_WATCHING_TOPIC -->check-<!-- ENDIF -->square-o fa-fw" aria-hidden="true"></i>
+		<a href="{U_WATCH_TOPIC}" class="button" title="{S_WATCH_TOPIC_TITLE}" id="topic_watch_button">
+			<span>{S_WATCH_TOPIC_TITLE}</span> <i class="icon fa-<!-- IF S_WATCHING_TOPIC -->check-<!-- ENDIF -->square-o fa-fw" aria-hidden="true"></i>
 		</a>
 	<!-- ENDIF -->
 	<span class="responsive-hide">
 		<!-- IF U_BOOKMARK_TOPIC -->
-			<a href="{U_BOOKMARK_TOPIC}" class="button" title="L_BOOKMARK_TOPIC">
+			<a href="{U_BOOKMARK_TOPIC}" class="button" title="{L_BOOKMARK_TOPIC}" id="topic_bookmark_button">
 					<span>{S_BOOKMARK_TOPIC}</span> <i class="icon fa-bookmark-o fa-fw" aria-hidden="true"></i>
 			</a>
 		<!-- ENDIF -->
 		<!-- IF U_BUMP_TOPIC -->
-			<a href="{U_BUMP_TOPIC}" class="button" title="L_BUMP_TOPIC">
+			<a href="{U_BUMP_TOPIC}" class="button" title="{L_BUMP_TOPIC}" id="topic_bump_button">
 					<span>{L_BUMP_TOPIC}</span> <i class="icon fa-level-up fa-fw" aria-hidden="true"></i>
 			</a>
 		<!-- ENDIF -->
 	</span>
-	<!-- IF(U_BOOKMARK_TOPIC or U_BUMP_TOPIC or U_EMAIL_TOPIC or U_PRINT_TOPIC or S_DISPLAY_TOPIC_TOOLS) -->
+	<!-- IF(U_WATCH_TOPIC or U_BOOKMARK_TOPIC or U_BUMP_TOPIC or U_EMAIL_TOPIC or U_PRINT_TOPIC or S_DISPLAY_TOPIC_TOOLS) -->
 		<div class="dropdown-container dropdown-button-control topic-tools responsive-show"<!-- IF!(U_BUMP_TOPIC or U_EMAIL_TOPIC or U_PRINT_TOPIC or S_DISPLAY_TOPIC_TOOLS) --> style="display: none;"<!-- ENDIF -->>
 			<span title="{L_TOPIC_TOOLS}" class="button button-secondary dropdown-trigger dropdown-select">
 				<i class="icon fa-wrench fa-fw" aria-hidden="true"></i>
 				<span class="caret"><i class="icon fa-sort-down fa-fw" aria-hidden="true"></i></span>
 			</span>
 			<div class="dropdown">
-				<div class="pointer"><div class="pointer-inner"></div></div>
+				<div class="pointer">
+					<div class="pointer-inner"></div>
+				</div>
 				<ul class="dropdown-contents">
 					<!-- EVENT viewtopic_topic_tools_before -->
+					<!-- IF U_WATCH_TOPIC -->
+					<li>
+						<a href="{U_WATCH_TOPIC}" class="watch-topic-link" title="{S_WATCH_TOPIC_TITLE}" data-ajax="toggle_link" data-toggle-class="icon <!-- IF S_WATCHING_TOPIC -->fa-check-square-o<!-- ELSE -->fa-square-o<!-- ENDIF --> fa-fw" data-toggle-text="{S_WATCH_TOPIC_TOGGLE}" data-toggle-url="{U_WATCH_TOPIC_TOGGLE}" data-update-all=".watch-topic-link">
+							<i class="icon <!-- IF S_WATCHING_TOPIC -->fa-check-square-o<!-- ELSE -->fa-square-o<!-- ENDIF --> fa-fw" aria-hidden="true"></i><span>{S_WATCH_TOPIC_TITLE}</span>
+						</a>
+					</li>
+					<!-- ENDIF -->
 					<!-- IF U_BOOKMARK_TOPIC -->
 						<li>
 							<a href="{U_BOOKMARK_TOPIC}" class="bookmark-link" title="{L_BOOKMARK_TOPIC}" data-ajax="alt_text" data-alt-text="{S_BOOKMARK_TOGGLE}" data-update-all=".bookmark-link">

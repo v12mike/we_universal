@@ -69,6 +69,10 @@ a:hover, a:active {
 }*/
 
 
+/*#topic_watch_button, */#topic_bookmark_button, #topic_bump_button{
+    display: none;
+}
+
 /*
  * Button hide threshold
  * The max-width here adjusts the screen widths for which the header buttons are replaced by a dropdown menu
