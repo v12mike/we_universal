@@ -83,10 +83,10 @@ a:hover, a:active {
  * The max-width here adjusts the screen widths for which the header buttons are replaced by a dropdown menu
  * set this value higher if the screen buttons start to wrap, or the text becomes ugly in your language.
  * The valid range of this value is 319px to 699px.
- * a value of 319px works for me, but if you have added buttons, or a language with long button labels, a higher
- * value ma be better.
+ * I prefer a value of 319px, but if you have added buttons, or use a language with long button labels,
+ * a higher value may work better for you.
  */
-@media only screen and (max-width: 549px) {
+@media only screen and (max-width: 459px) {
     .inventea-menu li > a {
            display: none; 
     }
@@ -99,3 +99,23 @@ a:hover, a:active {
     padding-bottom: 4%;
     }
 }
+
+/*
+ * Thanks to Picaron
+ * To move the header buttons to overlap the header image and hide the bars above and below the header image,
+ * This matches (almost) the original we_universal layout for phpBB v3.1.
+ * Uncomment the following blocks:
+*/
+/*
+.inventea-posts-menu {
+    position: absolute;
+    right: 0;
+    z-index: 3;
+}
+
+.inventea-forum-menu {
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+}
+*/

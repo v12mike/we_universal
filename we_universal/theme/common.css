@@ -18,6 +18,7 @@ h1 {
 	margin: 0 0 5px 0;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 36px;
+	line-height: 36px;
 }
 
 h2 {
@@ -140,8 +141,8 @@ a:hover, a:focus {	color: #bc2a4d;	}
 .inventea-sitename {
     position: absolute;
     left: 5%; 
-    top: 40%;
-	color: #fff;
+    top: calc(50% - 20px);
+    color: #fff;
 	font-size: 14px;
 }
 
@@ -252,16 +253,26 @@ a.header-avatar span:after {
 	display: block;
 	padding: .7vw 10px;
 	background: #333;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(10, 10, 10, 0.7);
 	color: #eee;
 }
 
 .inventea-menu li > a:focus,
 .inventea-menu li > a:hover,
 .inventea-menu li > a:active {
-	background: rgba(0, 0, 0, 0.9);
+	background: rgba(0, 0, 0, 0.95);
 	text-decoration: none;
+	font-weight: bold;
 }
+
+div.header-profile  > div.dropdown {
+    z-index: 4;
+}
+
+#notification_list {
+    z-index: 4;
+}
+
 
 /**
  * Breadcrumbs and footer navigation
