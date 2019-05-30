@@ -71,7 +71,7 @@
 				</dl>
 			</li>
 		</ul>
-		<ul class="topiclist topics">
+		<ul class="inventea topiclist topics">
 
 		<!-- BEGIN searchresults -->
 			<!-- EVENT search_results_topic_before -->
@@ -109,7 +109,6 @@
 								</a>
 							<!-- ENDIF -->
 							<br />
-							
 							<!-- EVENT topiclist_row_topic_title_after -->
 							
 							<!-- IF not S_IS_BOT -->
@@ -127,6 +126,7 @@
 								<!-- IF searchresults.ATTACH_ICON_IMG --><i class="icon fa-paperclip fa-fw" aria-hidden="true"></i><!-- ENDIF -->
 								{L_POST_BY_AUTHOR} <!-- EVENT search_results_topic_author_username_prepend -->{searchresults.TOPIC_AUTHOR_FULL}<!-- EVENT search_results_topic_author_username_append --> &raquo; {searchresults.FIRST_POST_TIME} &raquo; {L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a>
 							</div>
+
 							<!-- IF .searchresults.pagination -->
 							<div class="pagination">
 								<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>							
@@ -144,7 +144,6 @@
 							<!-- ENDIF -->
 							
 							<!-- EVENT topiclist_row_append -->
-
 						</div>
 					</dd>
 					<dd class="posts">
@@ -187,9 +186,7 @@
 
 	<!-- IF searchresults.S_IGNORE_POST -->
 		<div class="postbody">
-				<a href="{searchresults.U_VIEW_POST}" class="arrow-{S_CONTENT_FLOW_END}">
-					<i class="icon fa-angle-{S_CONTENT_FLOW_END} fa-fw icon-black" aria-hidden="true"></i><span>{L_JUMP_TO_POST}</span>
-				</a>
+			{searchresults.L_IGNORE_POST}
 		</div>
 	<!-- ELSE -->
 		<dl class="postprofile">
@@ -213,12 +210,14 @@
 
 	<!-- IF not searchresults.S_IGNORE_POST -->
 		<ul class="searchresults">
-			<li >
-				<a href="{searchresults.U_VIEW_POST}" class="arrow-{S_CONTENT_FLOW_END}">{L_JUMP_TO_POST}
+			<li>
+				<a href="{searchresults.U_VIEW_POST}" class="arrow-{S_CONTENT_FLOW_END}">
+					<i class="icon fa-angle-{S_CONTENT_FLOW_END} fa-fw icon-black" aria-hidden="true"></i><span>{L_JUMP_TO_POST}</span>
 				</a>
 			</li>
 		</ul>
 	<!-- ENDIF -->
+
 			</div>
 		</div>
 		<!-- EVENT search_results_post_after -->
