@@ -812,7 +812,7 @@ a.postlink:hover {
 
  .signature {
      width: 87%;
-     max-height: 150px;
+     max-height: 350px;
      overflow: auto;
  }
 
