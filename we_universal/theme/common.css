@@ -262,7 +262,6 @@ a.header-avatar span:after {
 .inventea-menu li > a:active {
 	background: rgba(0, 0, 0, 0.95);
 	text-decoration: none;
-	font-weight: bold;
 }
 
 div.header-profile  > div.dropdown {
