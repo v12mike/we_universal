@@ -17,7 +17,9 @@
 					<span class="footer-copyright">{{ TRANSLATION_INFO }}</span>
 				</p>
 				<!-- ENDIF -->
-				Style <a href="https://phpbb.com/customise/db/style/we_universal">we_universal</a>  created by INVENTEA & v12mike
+				<p class="footer-row">
+					<span class="footer-copyright">Style <a href="https://phpbb.com/customise/db/style/we_universal">we_universal</a>  created by INVENTEA & v12mike</span>
+				</p>
 				<!-- EVENT overall_footer_copyright_append -->
 				<p class="footer-row">
 					<a class="footer-link" href="{{ U_PRIVACY }}" title="{{ lang('PRIVACY_LINK') }}" role="menuitem">
@@ -31,6 +33,11 @@
 				<!-- IF DEBUG_OUTPUT -->
 				<p class="footer-row">
 					<span class="footer-info">{{ DEBUG_OUTPUT }}</span>
+				</p>
+				<!-- ENDIF -->
+				<!-- IF U_ACP -->
+				<p class="footer-row">
+					<a class="footer-link text-strong" href="{{ U_ACP }}">{{ lang('ACP') }}</a>
 				</p>
 				<!-- ENDIF -->
 			</footer>
@@ -63,6 +70,7 @@
 <script src="{T_JQUERY_LINK}"></script>
 <!-- IF S_ALLOW_CDN --><script>window.jQuery || document.write('\x3Cscript src="{T_ASSETS_PATH}/javascript/jquery.min.js?assets_version={T_ASSETS_VERSION}">\x3C/script>');</script><!-- ENDIF -->
 <script src="{T_ASSETS_PATH}/javascript/core.js?assets_version={T_ASSETS_VERSION}"></script>
+
 <!-- INCLUDEJS forum_fn.js -->
 <!-- INCLUDEJS ajax.js -->
 <!-- IF S_ALLOW_CDN -->
@@ -98,7 +106,7 @@
 					"message": "{LA_COOKIE_CONSENT_MSG}",
 					"dismiss": "{LA_COOKIE_CONSENT_OK}",
 					"link": "{LA_COOKIE_CONSENT_INFO}",
-                    "href": "{UA_PRIVACY}"
+					"href": "{UA_PRIVACY}"
 				}
 			})
 		});
