@@ -66,11 +66,19 @@
 	<link href="{T_ASSETS_PATH}/cookieconsent/cookieconsent.min.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
 <!-- ENDIF -->
 
+<!--[if lte IE 9]>
+	<link href="{ROOT_PATH}styles/prosilver/theme/tweaks.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
+<![endif]-->
+
 <!-- EVENT overall_header_head_append -->
 
 {$STYLESHEETS}
 
 <!-- EVENT overall_header_stylesheets_after -->
+
+<!--[if lt IE 9]>
+	<script src="{T_TEMPLATE_PATH}/html5shiv.min.js"></script>
+<![endif]-->
 
 </head>
 <body id="phpbb" class="nojs notouch section-{SCRIPT_NAME} {S_CONTENT_DIRECTION} {BODY_CLASS}<!-- IF S_USER_LOGGED_IN --> logged-in<!-- ELSE --> logged-out<!-- ENDIF -->">
@@ -112,11 +120,13 @@
 											<i class="icon fa-sliders fa-fw" aria-hidden="true"></i><span>{L_PROFILE}</span>
 										</a>
 									</li>
+									<!-- IF U_USER_PROFILE -->
 									<li>
 										<a href="{U_USER_PROFILE}" title="{L_READ_PROFILE}" role="menuitem">
 											<i class="icon fa-user fa-fw" aria-hidden="true"></i><span>{L_READ_PROFILE}</span>
 										</a>
 									</li>
+									<!-- ENDIF -->
 
 									<!-- EVENT navbar_header_profile_list_after -->
 
@@ -257,15 +267,18 @@
 				<li class="rightside inventea-time"><!-- IF S_USER_LOGGED_IN -->{LAST_VISIT_DATE}<!-- ELSE -->{CURRENT_TIME}<!-- ENDIF --></li>
 			<!-- ENDIF -->
 
-			<!-- DEFINE $MICRODATA = ' itemtype="http://data-vocabulary.org/Breadcrumb" itemscope=""' -->
+			<!-- DEFINE $MICRODATA = ' itemtype="http://schema.org/ListItem" itemprop="itemListElement" itemscope' -->
+			{% set navlink_position = 1 %}			
 			<!-- EVENT overall_header_breadcrumbs_before -->
-			<li class="small-icon breadcrumbs">
-				<!-- IF U_SITE_HOME --><span class="crumb"{$MICRODATA}><a href="{U_SITE_HOME}" data-navbar-reference="home" itemprop="url"><span itemprop="title">{L_SITE_HOME}</span></a></span><!-- ENDIF -->
+			<li class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+				<!-- IF U_SITE_HOME -->
+					<span class="crumb" {$MICRODATA}><a href="{U_SITE_HOME}" itemtype="https://schema.org/Thing" itemprop="item" data-navbar-reference="home"><i class="icon fa-home fa-fw" aria-hidden="true"></i><span itemprop="name">{L_SITE_HOME}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></span>
+				<!-- ENDIF -->
 				<!-- EVENT overall_header_breadcrumb_prepend -->
-				<span class="crumb"{$MICRODATA}><a href="{U_INDEX}" accesskey="h" data-navbar-reference="index" itemprop="url"><span itemprop="title">{L_INDEX}</span></a></span>
+				<span class="crumb" {$MICRODATA}><a href="{U_INDEX}" itemtype="https://schema.org/Thing" itemprop="item" accesskey="h" data-navbar-reference="index"><!-- IF not U_SITE_HOME --><i class="icon fa-home fa-fw"></i><!-- ENDIF --><span itemprop="name">{L_INDEX}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></span>					
 				<!-- BEGIN navlinks -->
 					<!-- EVENT overall_header_navlink_prepend -->
-					<span class="crumb"{$MICRODATA}<!-- IF navlinks.MICRODATA --> {navlinks.MICRODATA}<!-- ENDIF -->><a href="{navlinks.U_VIEW_FORUM}" itemprop="url"><span itemprop="title">{navlinks.FORUM_NAME}</span></a></span>
+					<span class="crumb" {$MICRODATA}<!-- IF navlinks.MICRODATA --> {navlinks.MICRODATA}<!-- ENDIF -->><a href="{navlinks.U_VIEW_FORUM}" itemtype="https://schema.org/Thing" itemprop="item"><span itemprop="name">{navlinks.FORUM_NAME}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></span>
 					<!-- EVENT overall_header_navlink_append -->
 				<!-- END navlinks -->
 				<!-- EVENT overall_header_breadcrumb_append -->
