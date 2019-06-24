@@ -1,10 +1,10 @@
 ![we_universal](https://camo.githubusercontent.com/5c3fee1c6ae39b26c5a0387cdc27ac31aee335e4/68747470733a2f2f696e76656e7465612e636f6d2f696d616765732f77655f756e6976657273616c2e706e67)
 
 
-phpBB style: [we_universal](https://inventea.com/en/projects/we_universal)
+phpBB style: [we_universal](https://www.phpbb.com/customise/db/style/we_universal/)
 ==========================================================================
 
-we_universal is a modern, clean style for **phpBB 3.2**.
+we_universal is a modern, clean style for **phpBB 3.2.x**.
 It uses principles of flat design and Responsive Web Design technique.
 Fits great on desktops and various mobile devices. This style is suitable for
 all kinds of forum communities and it is compatible with all major browsers.
@@ -28,7 +28,8 @@ select new default and guest style.
 Customisation
 -------------
 
-There are several easy customisations for the theme which may be activated and adjusted in 
+The look of the style is of course easily changed by adding your own header image.
+There are also several easy customisations for the style which may be activated and adjusted in 
 the file theme/customise.css
 
 Assets
