@@ -101,12 +101,11 @@ a:hover, a:active {
 }
 
 /*
- * Thanks to Picaron
- * To move the header buttons to overlap the header image and hide the bars above and below the header image,
- * This matches (almost) the original we_universal layout for phpBB v3.1.
- * Uncomment the following blocks:
-*/
-/*
+ * To move the header buttons so that they sit outside the header image, 
+ * (as was the default for a few version of this style), 
+ * comment out the following 2 blocks of code:
+ */
+
 .inventea-posts-menu {
     position: absolute;
     right: 0;
@@ -118,4 +117,4 @@ a:hover, a:active {
     bottom: 0;
     z-index: 3;
 }
-*/
+
