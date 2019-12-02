@@ -102,6 +102,7 @@ ul.topiclist li.row dd:nth-child(even),
 .forumbg ul.topiclist li.row dd:nth-child(odd),
 table.table1 tbody td:nth-child(even) {
 	background-color: #f1f1f1;
+	background-size: 32px;
 }
 
 .forabg ul.topiclist li.row dt:nth-child(even),
