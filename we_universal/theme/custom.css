@@ -74,7 +74,7 @@ a:hover, a:active {
 }*/
 
 
-/*#topic_watch_button, */#topic_bookmark_button, #topic_bump_button{
+/*#topic_watch_button,*/ #forum_watch_button, #topic_bookmark_button, #topic_bump_button{
     display: none;
 }
 

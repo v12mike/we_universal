@@ -1200,9 +1200,6 @@ hr.dashed {
 .topic_unread_locked dt:nth-child(1)			{ background-image: url("./images/topic_unread_locked.gif"); }
 .topic_unread_locked_mine dt:nth-child(1)		{ background-image: url("./images/topic_unread_locked_mine.gif"); }
 
-.pm_read dt:nth-child(1)						{ background-image: url("./images/topic_read.gif"); }
-.pm_unread dt:nth-child(1)						{ background-image: url("./images/topic_unread.gif"); }
-
 .forabg ul.topiclist li.row dl dt:nth-child(1) {
 	background-position: 10px 50%;
 	background-repeat: no-repeat;
