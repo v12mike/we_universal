@@ -281,7 +281,7 @@ table.table1 td {
 
 .cp-main table.table1 thead th {
 	border-bottom: 0;
-	color: #fff;
+	color: #ffffff;
 	text-align: left;
 }
 
@@ -413,7 +413,7 @@ dl.faq dt {
 	border-bottom: 3px solid #0c9076;
 	border-radius: 5px;
 	background: #0ead8e;
-	color: #fff;
+	color: #ffffff;
 	text-transform: uppercase;
 }
 
@@ -689,7 +689,7 @@ fieldset.polls dd div {
 .attachbox {
 	clear: right;
 	padding: 7px;
-	border: 1px solid #ccc;
+	border: 1px solid #cccccc;
 }
 
 .inline-attachment {
@@ -709,7 +709,7 @@ dl.file {
 
 .attachbox dd {
 	padding-top: 6px;
-	border-color: #ccc;
+	border-color: #cccccc;
 }
 
 dl.file {
@@ -745,7 +745,7 @@ dl.codebox {
 	margin-top: 15px;
 	margin-bottom: 15px;
 	padding: 3px 5px;
-	border-color: #ccc;
+	border-color: #cccccc;
 }
 
 dl.codebox dt {
@@ -767,7 +767,7 @@ blockquote.uncited {
 blockquote {
 	margin-top: 15px;
 	margin-bottom: 15px;
-	border-color: #ddd;
+	border-color: #dddddd;
 	background: #fbfbfb;
 	font-size: 14px;
 }
@@ -882,7 +882,7 @@ a.postlink:hover {
 .postbody ul.profile-icons li a:active {
 	border-color: #91203c;
 	background: #bc2a4d;
-	color: #fff;
+	color: #ffffff;
 	text-decoration: none;
 }
 
@@ -1013,7 +1013,7 @@ hr + .topic-actions {
 	display: block;
 	width: auto;
 	padding: 8px 10px 6px;
-	border-bottom: 3px solid #ccc;
+	border-bottom: 3px solid #cccccc;
 	border-radius: 5px;
 	background: #e9e9e9;
 	color: #6b6b6b;
@@ -1027,7 +1027,7 @@ hr + .topic-actions {
 .buttons div a:active {
 	border-color: #91203c;
 	background: #bc2a4d;
-	color: #fff;
+	color: #ffffff;
 	text-decoration: none;
 }
 
@@ -1074,7 +1074,7 @@ th a:link,
 th a:visited,
 th a:hover,
 th a:active {
-	color: #fff;
+	color: #ffffff;
 }
 
 a.forumtitle:hover,

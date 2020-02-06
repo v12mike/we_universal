@@ -208,17 +208,13 @@
 			</div>
 			</nav>
 			<div class="inventea-dashboard" role="banner">
-				<!-- EVENT inventea_sitename_before -->
-				<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ L_SITE_HOME }}{% else %}{{ L_INDEX }}{% endif %}" style="position: absolute; left: 0%; top: 20%; width: 100%; height: 60%;">
+				<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ L_SITE_HOME }}{% else %}{{ L_INDEX }}{% endif %}">
 					<div class="inventea-sitename">
 						<h1>{SITENAME}</h1>
 						<span>{SITE_DESCRIPTION}</span>
 					</div>
 				</a>
-				<!-- EVENT inventea_sitename_after -->
-				<!-- EVENT inventea_dashboad_image_before -->
 				<img class="inventea-dashboard-image" src="{T_THEME_PATH}/images/dashboard.jpg?assets_version={T_ASSETS_VERSION}" alt="forum header image">
-				<!-- EVENT inventea_dashboard_image_after -->
 			</div>
 
 			<nav>

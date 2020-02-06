@@ -48,7 +48,7 @@ input,
 select,
 textarea,
 #message-box textarea {
-	background: #fff;
+	background: #ffffff;
 	line-height: 18px;
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
 	font-size: 12px;
@@ -92,7 +92,7 @@ select,
 select:hover,
 .inputbox,
 .inputbox:hover {
-	border-color: #ccc;
+	border-color: #cccccc;
 }
 
 select:focus,
@@ -181,7 +181,7 @@ input.button3:active {
 	border-color: #bc2a4d;
 	border-bottom: 2px solid #91203c;
 	background: #bc2a4d;
-	color: #fff;
+	color: #ffffff;
 }
 
 .button:hover,

@@ -48,7 +48,7 @@
 
 .navigation a {
 	padding: 8px 6px;
-	background: #ccc;
+	background: #cccccc;
 	color: #525252;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .navigation a:hover {
-	background: #bbb;
+	background: #bbbbbb;
 	color: #bc2a4d;
 }
 
@@ -73,7 +73,7 @@
 @media only screen and (max-width: 900px), only screen and (max-device-width: 900px)
 {
 	#navigation a, .rtl #navigation a {
-		background: #CCC;
+		background: #cccccc;
 	}
 }
 
@@ -86,13 +86,13 @@
 	display: block;
 	padding: 8px;
 	border-radius: 0;
-	background: #ccc;
+	background: #cccccc;
 	color: #525252;
 }
 
 .minitabs .tab > a:hover,
 .minitabs .tab > a:active {
-	background: #bbb;
+	background: #bbbbbb;
 	color: #bc2a4d;
 }
 
@@ -131,7 +131,7 @@ dl.mini dt {
 .cp-main h3,
 .cp-main hr,
 .cp-menu hr {
-	border-color: #ccc;
+	border-color: #cccccc;
 }
 
 .cp-main .panel {
@@ -189,7 +189,7 @@ ul.cplist {
 .cp-main .panel li.header dd,
 .cp-main .panel li.header dt,
 .cp-main .panel li.header a {
-	color: #fff;
+	color: #ffffff;
 }
 
 .section-ucp ul.topiclist li.header,
