@@ -46,7 +46,8 @@
 							<!-- EVENT forumlist_body_forum_image_before -->
 							<span class="forum-image"><!-- EVENT forumlist_body_forum_image_prepend -->{forumrow.FORUM_IMAGE}<!-- EVENT forumlist_body_forum_image_append --></span>
 							<!-- EVENT forumlist_body_forum_image_after -->
-						<!-- ENDIF -->						<a href="{forumrow.U_VIEWFORUM}" class="forumtitle">{forumrow.FORUM_NAME}</a>
+						<!-- ENDIF -->
+						<a href="{forumrow.U_VIEWFORUM}" class="forumtitle">{forumrow.FORUM_NAME}</a>
 						<!-- IF forumrow.FORUM_DESC --><br />{forumrow.FORUM_DESC}<!-- ENDIF -->
 						<!-- IF forumrow.MODERATORS -->
 							<br /><strong>{forumrow.L_MODERATOR_STR}{L_COLON}</strong> {forumrow.MODERATORS}
@@ -102,7 +103,7 @@
 										<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">{L_VIEW_LATEST_POST}</span>
 									</a>
 								<!-- ENDIF -->
-								<br />{forumrow.LAST_POST_TIME}
+								<br /><time datetime="{forumrow.LAST_POST_TIME_RFC3339}">{forumrow.LAST_POST_TIME}</time>
 							<!-- ELSE -->
 								{% if forumrow.U_UNAPPROVED_TOPICS %}
 									{{ lang('TOPIC_UNAPPROVED_FORUM', forumrow.TOPICS) }}

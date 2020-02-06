@@ -86,9 +86,9 @@
 						<a href="{searchresults.U_NEWEST_POST}" class="row-item-link"></a>
 						<!-- ENDIF -->
 						<div class="list-inner">
-
 							<!-- EVENT topiclist_row_prepend -->
-							<!-- IF searchresults.S_UNREAD_TOPIC and not S_IS_BOT --><a class="unread" href="{searchresults.U_NEWEST_POST}">
+							<!-- IF searchresults.S_UNREAD_TOPIC and not S_IS_BOT -->
+								<a class="unread" href="{searchresults.U_NEWEST_POST}">
 									<i class="icon fa-file fa-fw icon-red icon-md" aria-hidden="true"></i><span class="sr-only">{L_NEW_POST}</span>
 								</a>
 							<!-- ENDIF -->
@@ -110,7 +110,7 @@
 							<!-- ENDIF -->
 							<br />
 							<!-- EVENT topiclist_row_topic_title_after -->
-							
+
 							<!-- IF not S_IS_BOT -->
 								<div class="responsive-show" style="display: none;">
 									{L_POST_BY_AUTHOR} {searchresults.TOPIC_AUTHOR_FULL} &raquo; {searchresults.FIRST_POST_TIME} &raquo; {L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a>
@@ -125,13 +125,13 @@
 								<!-- IF searchresults.S_HAS_POLL --><i class="icon fa-bar-chart fa-fw" aria-hidden="true"></i><!-- ENDIF -->
 								<!-- IF searchresults.ATTACH_ICON_IMG --><i class="icon fa-paperclip fa-fw" aria-hidden="true"></i><!-- ENDIF -->
 								{% EVENT topiclist_row_topic_by_author_before %}
-								{L_POST_BY_AUTHOR} <!-- EVENT search_results_topic_author_username_prepend -->{searchresults.TOPIC_AUTHOR_FULL}<!-- EVENT search_results_topic_author_username_append --> &raquo; {searchresults.FIRST_POST_TIME} &raquo; {L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a>
+								{L_POST_BY_AUTHOR} <!-- EVENT search_results_topic_author_username_prepend -->{searchresults.TOPIC_AUTHOR_FULL}<!-- EVENT search_results_topic_author_username_append --> &raquo; <time datetime="{searchresults.FIRST_POST_TIME_RFC3339}">{searchresults.FIRST_POST_TIME}</time> &raquo; {L_IN} <a href="{searchresults.U_VIEW_FORUM}">{searchresults.FORUM_TITLE}</a>
 								{% EVENT topiclist_row_topic_by_author_after %}
 							</div>
 
 							<!-- IF .searchresults.pagination -->
 							<div class="pagination">
-								<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>							
+								<span><i class="icon fa-clone fa-fw" aria-hidden="true"></i></span>
 								<ul>
 								<!-- BEGIN pagination -->
 									<!-- IF searchresults.pagination.S_IS_PREV -->
@@ -144,7 +144,7 @@
 								</ul>
 							</div>
 							<!-- ENDIF -->
-							
+
 							<!-- EVENT topiclist_row_append -->
 						</div>
 					</dd>
@@ -153,15 +153,15 @@
 						{L_VIEWS}{L_COLON} <strong>{searchresults.TOPIC_VIEWS}</strong>
 					</dd>
 					<dd class="lastpost">
-						<!-- IF not S_IS_BOT-->
 							<span>
 								<dfn>{L_LAST_POST} </dfn>{L_POST_BY_AUTHOR} <!-- EVENT search_results_last_post_author_username_prepend -->{searchresults.LAST_POST_AUTHOR_FULL}<!-- EVENT search_results_last_post_author_username_append -->
+							<!-- IF not S_IS_BOT -->
 								<a href="{searchresults.U_LAST_POST}" title="{L_GOTO_LAST_POST}">
 									<i class="icon fa-external-link-square fa-fw icon-lightgray icon-md" aria-hidden="true"></i><span class="sr-only">{VIEW_LATEST_POST}</span>
 								</a>
-							<br />{searchresults.LAST_POST_TIME}
+							<!-- ENDIF -->
+							<br /><time datetime="{searchresults.LAST_POST_TIME_RFC3339}">{searchresults.LAST_POST_TIME}</time>
 							</span>
-						<!-- ENDIF -->
 					</dd>
 				</dl>
 			</li>
@@ -238,7 +238,7 @@
 		<!-- INCLUDE display_options.html -->
 	</form>
 	<!-- ENDIF -->
-	
+
 	<div class="pagination">
 		{SEARCH_MATCHES}
 		<!-- IF .pagination -->

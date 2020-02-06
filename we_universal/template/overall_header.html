@@ -2,7 +2,7 @@
 <html dir="{S_CONTENT_DIRECTION}" lang="{S_USER_LANG}">
 <head>
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 {META}
 <title><!-- IF UNREAD_NOTIFICATIONS_COUNT -->({UNREAD_NOTIFICATIONS_COUNT}) <!-- ENDIF --><!-- IF not S_VIEWTOPIC and not S_VIEWFORUM -->{SITENAME} - <!-- ENDIF --><!-- IF S_IN_MCP -->{L_MCP} - <!-- ELSEIF S_IN_UCP -->{L_UCP} - <!-- ENDIF -->{PAGE_TITLE}<!-- IF S_VIEWTOPIC or S_VIEWFORUM --> - {SITENAME}<!-- ENDIF --></title>
@@ -50,7 +50,6 @@
 <link href="{ROOT_PATH}styles/prosilver/theme/stylesheet.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
 <link href="{T_FONT_AWESOME_LINK}" rel="stylesheet">
 <link href="{T_STYLESHEET_LINK}" rel="stylesheet">
-<link href="{ROOT_PATH}styles/prosilver/theme/responsive.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
 <link href="{T_THEME_PATH}/responsive.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
 <link href="{T_THEME_PATH}/custom.css?assets_version={T_ASSETS_VERSION}" rel="stylesheet">
 
@@ -210,7 +209,7 @@
 			</nav>
 			<div class="inventea-dashboard" role="banner">
 				<!-- EVENT inventea_sitename_before -->
-				<a href="<!-- IF U_SITE_HOME -->{U_SITE_HOME}<!-- ELSE -->{U_INDEX}<!-- ENDIF -->" title="<!-- IF U_SITE_HOME -->{L_SITE_HOME}<!-- ELSE -->{L_INDEX}<!-- ENDIF -->" style="position: absolute; left: 0%; top: 20%; width: 100%; height: 60%;">
+				<a href="{% if U_SITE_HOME %}{{ U_SITE_HOME }}{% else %}{{ U_INDEX }}{% endif %}" title="{% if U_SITE_HOME %}{{ L_SITE_HOME }}{% else %}{{ L_INDEX }}{% endif %}" style="position: absolute; left: 0%; top: 20%; width: 100%; height: 60%;">
 					<div class="inventea-sitename">
 						<h1>{SITENAME}</h1>
 						<span>{SITE_DESCRIPTION}</span>
@@ -232,25 +231,30 @@
 						<!-- IF S_DISPLAY_SEARCH -->
 						<li>
 							<a href="{U_SEARCH}" role="menuitem">{L_SEARCH}</a>
-						</li><!-- ENDIF -->
-						<!-- IF not S_IS_BOT -->
+						</li>
+						<!-- ENDIF -->
+						<!-- IF not S_IS_BOT and (S_DISPLAY_MEMBERLIST or U_TEAM) -->
 						<!-- IF S_DISPLAY_MEMBERLIST -->
 						<li id="button_memberlist">
 							<a href="{U_MEMBERLIST}" role="menuitem">{L_MEMBERLIST}</a>
-						</li><!-- ENDIF -->
+						</li>
+						<!-- ENDIF -->
 						<!-- IF U_TEAM -->
 						<li id="button_team">
 							<a href="{U_TEAM}" role="menuitem">{L_THE_TEAM}</a>
-						</li><!-- ENDIF -->
+						</li>
+						<!-- ENDIF -->
 						<!-- ENDIF -->
 						<!-- IF U_MCP -->
 						<li>
 							<a href="{U_MCP}" title="{L_MCP_SHORT}" role="menuitem">{L_MCP_SHORT}</a>
-						</li><!-- ENDIF -->
+						</li>
+						<!-- ENDIF -->
 						<!-- IF U_ACP -->
 						<li>
 							<a href="{U_ACP}" title="{L_ACP_SHORT}" role="menuitem">{L_ACP_SHORT}</a>
-						</li><!-- ENDIF -->
+						</li>
+						<!-- ENDIF -->
 						<!-- EVENT overall_header_navigation_append -->
 					</ul>
 				</div>
