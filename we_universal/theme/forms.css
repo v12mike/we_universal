@@ -263,7 +263,7 @@ input.search {
 }
 
 .smiley-box {
-	width: 19%;
+	max-width: 200px;
 }
 
 .options-panel,

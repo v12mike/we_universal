@@ -1,12 +1,6 @@
 /**
  * Common tags
  */
-html,
-body {
-	background: #f9f9f9;
-	color: #525252;
-}
-
 body {
 	margin: 0;
 	padding: 0;
@@ -31,7 +25,6 @@ h3 {
 	margin-top: 24px;
 	margin-bottom: 8px;
 	padding-bottom: 5px;
-	color: #3f3f3f;
 	font-size: 14px;
 }
 
@@ -45,10 +38,6 @@ hr {
 	margin-top: 8px;
 	margin-bottom: 8px;
 }
-
-a {	color: #3f3f3f;	}
-
-a:hover, a:focus {	color: #bc2a4d;	}
 
 /**
  * Structure
@@ -92,24 +81,27 @@ a:hover, a:focus {	color: #bc2a4d;	}
 }
 
 .inventea-header {
-    position: relative;
-    margin: auto;
-	width: 100%;
+	position: relative;
+	/*margin: 0;*/
+	/*width: 100%;*/
+	padding: 0;
+	border-top: none;
+	border-bottom: 0;
 	background: #b4b4b4;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .inventea-dashboard img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 
 .inventea-dashboard a {
-    position: absolute; 
-    left: 0%; 
-    top: 20%; 
-    width: 100%; 
-    height: 60%;
+	position: absolute;
+	left: 0%;
+	top: 20%;
+	width: 100%;
+	height: 60%;
 	display: block;
 }
 
@@ -144,10 +136,10 @@ a:hover, a:focus {	color: #bc2a4d;	}
  * Forum name and description
  */
 .inventea-sitename {
-    position: absolute;
-    left: 5%; 
-    top: calc(50% - 20px);
-    color: #ffffff;
+	position: absolute;
+	left: 5%;
+	top: calc(50% - 30px);
+	color: #ffffff;
 	font-size: 14px;
 }
 
@@ -194,19 +186,19 @@ ul.linklist.inventea-user-menu > li + li {
 /* Small avatar near username */
 a.header-avatar,
 a.header-avatar:hover {
-	text-decoration: none;	
+	text-decoration: none;
 	border-radius: 3px;
 }
 
 a.header-avatar img {
- 	margin-bottom: 2px;
- 	max-height: 20px;
- 	vertical-align: middle;
- 	width: auto;
+	margin-bottom: 2px;
+	max-height: 20px;
+	vertical-align: middle;
+	width: auto;
 }
 
 a.header-avatar span:after {
-    padding-top: 0;
+	padding-top: 0;
 }
 
 /* pm and notification icons/labels */
@@ -230,13 +222,13 @@ a.header-avatar span:after {
 }
 
 .inventea-posts-menu {
-    float: right;
-    margin-right: 2.5%;
+	float: right;
+	margin-right: 2.5%;
 }
 
 .inventea-forum-menu {
-    float: left;
-    margin-left: 2.5%;
+	float: left;
+	margin-left: 2.5%;
 }
 
 .inventea-menu {
@@ -270,13 +262,12 @@ a.header-avatar span:after {
 }
 
 div.header-profile  > div.dropdown {
-    z-index: 4;
+	z-index: 4;
 }
 
 #notification_list {
-    z-index: 4;
+	z-index: 4;
 }
-
 
 /**
  * Breadcrumbs and footer navigation
@@ -437,8 +428,8 @@ p.rules img {
  */
 
 .row .pagination {
-    margin-top: 0px;
-    margin-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
 .pagination {

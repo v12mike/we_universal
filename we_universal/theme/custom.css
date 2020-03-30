@@ -8,74 +8,88 @@
 
 /* Changing the header image
  * With this version of we_universal it is not possible to change the header image using CSS
- * It is recommended that the header image is changed by renaming your file to dashboard.jpg in 
+ * It is recommended that the header image is changed by renaming your file to dashboard.jpg in
  * the styles/we_universal/theme/images/ directory.
  * Alternatively the link may be changed in styles/we_universal/template/overall_header.html
  * around line 211.
 
 
 /* link decoration
- * Uncomment the following lines to have all links underlined 
+ * Uncomment the following lines to have all links underlined
  * and visited links re-coloured
  */
 /*
 a:link,a:visited {
-    text-decoration: underline;
-    color: #3f3f3f; }
+	text-decoration: underline;
+	color: #3f3f3f; }
 
 a:focus,
 a:hover, a:active {
-    text-decoration: underline; }
+	text-decoration: underline; }
 */
 
 /*
- * set header background colour (appears as a border around the image)
+ * remove header background colour (no border around the image)
  */
+
+.inventea-header {
+	background: #ffffff;
+	/*background-clip: border-box;*/
+}
+
+/*
+ * set header background colour (appears as a border around the image, comment out this code for a white border)
+ */
+
+/*** begin header colour ***/
 /*
 .inventea-header {
-	background: #424242;   
+	background: #a4a4a4;
 }
 */
+/*** end header colour ***/
+
+
 /*
 .inventea-sitename, .inventea-sitename h1{
-	color: #005599;   
+	color: #005599;
 }
 */
 
 /* Set the maximum forum width on wide screens
  * To set a maximum width that the forum will not grow beyond, uncomment the following lines
- * and set a value (1200px is a typical value)
- *//*
+ * and set a value (1200px or 1899px are typical values)
+ */
 .inventea-wrapper,
 .inventea-header,
 .inventea-footer {
-	max-width: 1200px;
-}*/
+	max-width: 1800px;
+}
 
 
-/* 
- * Hide some non-essential menu items if desired 
+/*
+ * Hide some non-essential menu items if desired
  */
 /*
 #menu_faq, #button_faq{
-    display: none;
+	display: none;
 }
 */
 
 /*
 #menu_team, #button_team{
-    display: none;
+	display: none;
 }
 */
 
 /*
 #menu_memberlist, #button_memberlist{
-    display: none;
+	display: none;
 }*/
 
 
-/*#topic_watch_button,*/ #forum_watch_button, #topic_bookmark_button, #topic_bump_button{
-    display: none;
+/*#topic_watch_button, #forum_watch_button,*/ #topic_bookmark_button, #topic_bump_button{
+	display: none;
 }
 
 /*
@@ -86,34 +100,39 @@ a:hover, a:active {
  * I prefer a value of 319px, but if you have added buttons, or use a language with long button labels,
  * a higher value may work better for you.
  */
-@media only screen and (max-width: 459px) {
-    .inventea-menu li > a {
-           display: none; 
-    }
+@media only screen and (max-width:319px) {
+	.inventea-menu li > a {
+		   display: none;
+	}
 
-    .inventea-mobile-dropdown-menu {
-	    display: block;
-    }
-    .inventea-dashboard img {
-    padding-top: 4%;
-    padding-bottom: 4%;
-    }
+	.inventea-mobile-dropdown-menu {
+		display: block;
+	}
 }
 
 /*
- * To move the header buttons so that they sit outside the header image, 
- * (as was the default for a few version of this style), 
- * comment out the following 2 blocks of code:
+ * To move the header buttons so that they sit outside the header image,
+ * (as was the default for a few version of this style),
+ * comment out the following blocks of code:
  */
-
+/*** begin buttons inside ***/
 .inventea-posts-menu {
-    position: absolute;
-    right: 0;
-    z-index: 3;
+	position: absolute;
+	right: 10px;
+	z-index: 3;
 }
 
 .inventea-forum-menu {
-    position: absolute;
-    bottom: 0;
-    z-index: 3;
+	position: absolute;
+	bottom: 0;
+	z-index: 3;
 }
+
+@media only screen and (max-width: 459px){
+	.inventea-dashboard img {
+		padding-top: 22px;
+		padding-bottom: 22px;
+	}
+}
+/*** end buttons inside ***/
+
