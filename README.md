@@ -4,9 +4,9 @@
 phpBB style: [we_universal](https://www.phpbb.com/customise/db/style/we_universal/)
 ==========================================================================
 
-we_universal is a modern, clean style for **phpBB 3.2.x**.
+we_universal is a modern, clean style for **phpBB 3.3.x**.
 It uses principles of flat design and Responsive Web Design technique.
-Fits great on desktops and various mobile devices. This style is suitable for
+It fits great on desktops and various mobile devices. This style is suitable for
 all kinds of forum communities and it is compatible with all major browsers.
 
 we_universal is built on top of prosilver and uses [template + asset
