@@ -100,7 +100,7 @@ a:hover, a:active {
  * I prefer a value of 319px, but if you have added buttons, or use a language with long button labels,
  * a higher value may work better for you.
  */
-@media only screen and (max-width:319px) {
+@media only screen and (max-width:359px) {
 	.inventea-menu li > a {
 		   display: none;
 	}
