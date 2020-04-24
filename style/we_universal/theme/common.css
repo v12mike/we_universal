@@ -61,7 +61,7 @@ hr {
 .inventea-dashboard,
 .inventea-footer {
 	box-sizing: border-box;
-	width: 95%;
+/*	width: 95%;*/
 	max-width: none;
 	margin: auto;
 }
@@ -223,12 +223,12 @@ a.header-avatar span:after {
 
 .inventea-posts-menu {
 	float: right;
-	margin-right: 2.5%;
+/*	margin-right: 2.5%;*/
 }
 
 .inventea-forum-menu {
 	float: left;
-	margin-left: 2.5%;
+/*	margin-left: 2.5%;*/
 }
 
 .inventea-menu {
