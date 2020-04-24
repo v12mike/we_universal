@@ -52,6 +52,7 @@ textarea,
 	line-height: 18px;
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
 	font-size: 12px;
+	outline: none;
 }
 
 #message-box textarea {

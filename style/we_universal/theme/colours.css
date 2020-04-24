@@ -381,6 +381,27 @@ a.right:after {
 	color: #959595;
 }
 
+/* jQuery popups
+---------------------------------------- */
+
+
+.dropdown-extended ul li:hover {
+	background-color: #E1E1E1;
+	color: #000000;
+}
+
+.dropdown-extended .header {
+	background-color: #F1F1F1; /* Old browsers */ /* FF3.6+ */
+	background-image: -webkit-linear-gradient(top, #F1F1F1 0%, #CACACA 100%);
+	background-image: linear-gradient(to bottom, #F1F1F1 0%,#CACACA 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F1F1F1', endColorstr='#CACACA',GradientType=0 ); /* IE6-9 */
+}
+
+.dropdown-extended .pointer-inner {
+	border-color: #F1F1F1 transparent;
+}
+
+
 /**
  * Forum icons & Topic icons
  */
