@@ -67,6 +67,13 @@ a:hover, a:active {
 }
 
 
+/* Allow post text to fill the available width on wide screens */
+/*
+.section-viewtopic .postbody .content {
+	max-width: none;
+}
+*/
+
 /*
  * Hide some non-essential menu items if desired
  */
